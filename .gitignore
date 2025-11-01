@@ -1,0 +1,32 @@
+# Session data and logs
+debug/
+file-history/
+history.jsonl
+session-env/
+shell-snapshots/
+todos/
+
+# Project-specific cache
+projects/
+
+# Analytics and telemetry
+statsig/
+
+# Plugin metadata (machine-specific paths and timestamps)
+plugins/installed_plugins.json
+plugins/known_marketplaces.json
+plugins/config.json
+plugins/marketplaces/
+plugins/repos/
+
+# Any log files
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# OS-specific files
+.DS_Store
+Thumbs.db
