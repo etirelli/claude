@@ -11,3 +11,13 @@
 - Use git worktrees (not multiple clones) when switching between PRs/bugs frequently
 - In OSS projects where .claude/ can't be committed: symlink .claude/ from main worktree to share configuration
 - For automation and details, use the cross-repo-config skill
+
+# Machine-Specific Paths
+- All source code repositories are kept under `~/src/` directory
+- Example: vllm is at `~/src/vllm`, llama-stack is at `~/src/llama-stack`, etc.
+
+# Technical Accuracy and Documentation
+- NEVER fabricate or guess technical syntax without verifying against official documentation first
+- Always check documentation BEFORE implementing, not after the user catches errors
+- If uncertain about syntax or features, explicitly state uncertainty and verify before proceeding
+- Inventing syntax (like non-existent template variables) wastes time and breaks functionality
