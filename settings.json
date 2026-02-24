@@ -1,5 +1,14 @@
 {
-  "model": "claude-opus-4-6",
-  "enabledPlugins": {},
-  "alwaysThinkingEnabled": true
+  "enabledPlugins": {
+    "hello-world@ai-helpers": true
+  },
+  "extraKnownMarketplaces": {
+    "ai-helpers": {
+      "source": {
+        "source": "github",
+        "repo": "opendatahub-io/ai-helpers"
+      }
+    }
+  },
+  "model": "claude-opus-4-6"
 }
