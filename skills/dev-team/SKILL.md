@@ -44,27 +44,27 @@ Select 2–4 agents from the role catalog based on task type and scope.
 ### Role Catalog
 
 **Implementer** — Writes production code following project conventions.
-- Model: sonnet | Tools: Bash, Read, Grep, Glob, Edit, Write
+- Tools: Bash, Read, Grep, Glob, Edit, Write
 - Owns specific files/modules — does not touch files outside assigned scope
 - Delivers code that compiles, passes tests, follows conventions, and has no debug artifacts
 
 **Researcher** — Investigates codebase, reads docs, gathers data, surveys patterns.
-- Model: sonnet | Tools: Bash, Read, Grep, Glob, WebSearch, WebFetch
+- Tools: Bash, Read, Grep, Glob, WebSearch, WebFetch
 - Produces structured findings with file references and evidence
 - Use for: complex/unfamiliar codebases, strategy tasks, verifying document claims against code
 
 **Writer** — Drafts documents, communications, proposals, or analysis.
-- Model: sonnet | Tools: Read, Grep, Glob, Edit, Write
+- Tools: Read, Grep, Glob, Edit, Write
 - Adapts tone and detail level to the target audience
 - Produces concise, accurate, well-structured text with clear calls to action
 
 **QE Engineer** — Writes tests and validates behavior.
-- Model: sonnet | Tools: Bash, Read, Grep, Glob, Edit, Write
+- Tools: Bash, Read, Grep, Glob, Edit, Write
 - Owns test files exclusively — works in parallel with Implementer without file conflicts
 - Covers happy path, edge cases, and error conditions
 
 **Checker** — Reviews all output for quality. This is the quality gate.
-- Model: opus | Tools: Bash, Read, Grep, Glob
+- Tools: Bash, Read, Grep, Glob
 - Reviews against the quality standards for the task type (see Phase 3)
 - Every finding must be actionable: state the problem, the location, and a concrete fix
 - Confidence scoring: only report issues with confidence >= 80 (out of 100)
@@ -72,7 +72,7 @@ Select 2–4 agents from the role catalog based on task type and scope.
 - Also call out what's done well — not just problems
 
 **Security Reviewer** — Reviews from an adversarial perspective.
-- Model: opus | Tools: Read, Grep, Glob (read-only)
+- Tools: Read, Grep, Glob (read-only)
 - Use when: auth, credentials, secrets, access control, network rules, or user input handling
 - Checks: OWASP top 10, privilege escalation, information leakage
 
@@ -147,7 +147,7 @@ Then ask: "Ready to proceed, or adjust?"
 
 ## Phase 5: Execute
 
-Spawn each agent using the Task tool with `subagent_type: "general-purpose"` and the appropriate `model` parameter from the role catalog.
+Spawn each agent using the Task tool with `subagent_type: "general-purpose"`.
 
 Each agent's prompt must include:
 1. Their role, responsibilities, and tool access from the role catalog
