@@ -1,14 +1,7 @@
 {
   "enabledPlugins": {
-    "hello-world@ai-helpers": true
+    "obsidian@obsidian-skills": true
   },
-  "extraKnownMarketplaces": {
-    "ai-helpers": {
-      "source": {
-        "source": "github",
-        "repo": "opendatahub-io/ai-helpers"
-      }
-    }
-  },
+  "alwaysThinkingEnabled": true,
   "model": "claude-opus-4-6"
 }
